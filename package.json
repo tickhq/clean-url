@@ -1,0 +1,24 @@
+{
+	"name": "clean-url",
+	"version": "1.0.0",
+	"description": "Strip tracking and clutter from URLs.",
+	"main": "dist/src/index.js",
+	"types": "dist/src/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"test": "node test/smoke.js"
+	},
+	"keywords": [
+		"url",
+		"clean",
+		"tracking",
+		"utm",
+		"redirect"
+	],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^25.1.0",
+		"typescript": "^5.9.3"
+	}
+}
