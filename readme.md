@@ -1,6 +1,6 @@
 # @tickhq/clean-url
 
-Strip tracking and clutter from URLs, making them shorter and easier to read.
+This library strips unwanted tracking and clutter from URLs, making them simpler, tidier, and easier to read.
 
 ## Install
 
