@@ -6,7 +6,8 @@
 	"types": "dist/src/index.d.ts",
 	"scripts": {
 		"build": "tsc",
-		"test": "node test/smoke.js"
+		"test": "vitest run",
+		"test:watch": "vitest"
 	},
 	"keywords": [
 		"url",
@@ -19,6 +20,7 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@types/node": "^25.1.0",
-		"typescript": "^5.9.3"
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.18"
 	}
 }

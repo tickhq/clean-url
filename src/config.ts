@@ -4,14 +4,12 @@ export class CleanerConfig implements Config {
 	public allowAMP: boolean = false;
 	public allowCustomHandlers: boolean = true;
 	public allowRedirects: boolean = true;
-	public silent: boolean = true;
 
 	copy(): Config {
 		return {
 			allowAMP: this.allowAMP,
 			allowCustomHandlers: this.allowCustomHandlers,
 			allowRedirects: this.allowRedirects,
-			silent: this.silent,
 		};
 	}
 
