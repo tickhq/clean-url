@@ -26,7 +26,7 @@ validateURL("not a url"); // false
 
 // Custom config
 const cleaner = new Cleaner({
-	config: { allowAMP: false, allowRedirects: true, silent: true },
+	config: { allowAMP: false, allowRedirects: true },
 });
 const { url, info } = cleaner.clean("https://...");
 console.log(info.removed); // params that were stripped
@@ -35,7 +35,7 @@ console.log(info.removed); // params that were stripped
 ### Options
 
 - **`Cleaner(options?)`** – `options.rules`, `options.handlers`, `options.config` (partial) to override defaults.
-- **`cleaner.config`** – `allowAMP`, `allowCustomHandlers`, `allowRedirects`, `silent`. Use `config.setMany({ ... })` to set multiple.
+- **`cleaner.config`** – `allowAMP`, `allowCustomHandlers`, `allowRedirects`. Use `config.setMany({ ... })` to set multiple.
 
 ## Build & test
 
