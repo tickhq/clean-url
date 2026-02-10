@@ -172,10 +172,9 @@ describe("extractDomainKey", () => {
 		);
 	});
 
-	it("extracts from anchored pattern", () => {
-		expect(extractDomainKey(makeRule(/^www\.baidu\.com/i))).toBe(
-			"www.baidu.com",
-		);
+	it("returns null for ^-anchored pattern without wildcard prefix", () => {
+		// ^www\.baidu\.com has no .* prefix, so it can't be suffix-indexed
+		expect(extractDomainKey(makeRule(/^www\.baidu\.com/i))).toBeNull();
 	});
 
 	it("extracts from unescaped tidy-url pattern", () => {
@@ -206,5 +205,16 @@ describe("extractDomainKey", () => {
 
 	it("extracts from fully escaped domain", () => {
 		expect(extractDomainKey(makeRule(/amp\.scmp\.com/i))).toBe("amp.scmp.com");
+	});
+
+	it("returns null for ^-anchored exact domain (no wildcard prefix)", () => {
+		expect(extractDomainKey(makeRule(/^2game\.com/i))).toBeNull();
+		expect(extractDomainKey(makeRule(/^ko-fi\.com/i))).toBeNull();
+	});
+
+	it("still indexes non-anchored wildcard patterns", () => {
+		// .*\.? patterns (without ^) are indexed via the first branch
+		expect(extractDomainKey(makeRule(/.*\.?youtube\.com/i))).toBe("youtube.com");
+		expect(extractDomainKey(makeRule(/.*\.?reddit\.com/i))).toBe("reddit.com");
 	});
 });

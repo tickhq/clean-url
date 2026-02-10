@@ -203,10 +203,13 @@ export function extractDomainKey(rule: Rule): string | null {
 		return null;
 	}
 
-	// Anchored patterns: ^www\.domain\.com or ^.*.domain.com
-	m = src.match(/^\^(?:\.\*\.?)?([a-z0-9][a-z0-9.\\\-]+)$/i);
+	// Anchored patterns: ^.*\.?domain.com or ^.*.domain.com (with wildcard prefix)
+	// Bare ^domain.com (no .*) must NOT be indexed — the ^ anchor means exact
+	// match only, but suffix lookup would also match subdomains.
+	m = src.match(/^\^(\.\*\.?)?([a-z0-9][a-z0-9.\\\-]+)$/i);
 	if (m) {
-		const candidate = m[1].replace(/\\\./g, ".");
+		if (!m[1]) return null; // ^domain.com → exact match, can't index by suffix
+		const candidate = m[2].replace(/\\\./g, ".");
 		if (/^[a-z0-9.-]+$/i.test(candidate) && candidate.includes(".")) {
 			return candidate.toLowerCase();
 		}

@@ -513,4 +513,38 @@ describe("Additional edge cases", () => {
 		expect(result.url).toContain("q=search");
 		expect(result.url).toContain("page=2");
 	});
+
+	it("cleans URLs with special chars that URLSearchParams re-encodes", () => {
+		// ! gets re-encoded to %21 by URLSearchParams, inflating length.
+		// The sanity check should not revert the clean.
+		const url = "https://example.com/?q=hello!world!test!foo!bar!baz!qux!abc!def!ghi&_ga=x";
+		const result = cleaned(url);
+		expect(result.url).not.toContain("_ga=");
+	});
+
+	it("does not over-match ^-anchored rules on subdomains", () => {
+		const c = new Cleaner({
+			rules: [
+				{
+					name: "exact-only",
+					match: /^exact\.com/i,
+					rules: ["track"],
+				},
+			],
+		});
+		// Should NOT match www.exact.com (the ^ anchor means exact hostname only)
+		const result = c.clean("https://www.exact.com/page?track=1");
+		expect(result.url).toContain("track=1");
+
+		// Should match exact.com itself
+		const result2 = c.clean("https://exact.com/page?track=1");
+		expect(result2.url).not.toContain("track=1");
+	});
+
+	it("cleans pathname when allowAMP=true and no query params", () => {
+		const c = new Cleaner({ config: { allowAMP: true } });
+		const url = "https://www.amazon.com/dp/B08N5WRWNW/ref=sr_1_1";
+		const result = c.clean(url);
+		expect(result.url).not.toContain("/ref=");
+	});
 });

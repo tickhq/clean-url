@@ -167,14 +167,13 @@ export class Cleaner {
 			parsed.hash;
 		data.url = url;
 
-		// Fast path: no params and AMP is allowed -> nothing to do
-		if (this.config.allowAMP && parsed.search === "") {
-			data.url = data.info.original;
-			return data;
-		}
-
 		const cleaner = parsed.searchParams;
 		let pathname = parsed.pathname;
+
+		// Capture re-encoded baseline before any deletions (URLSearchParams
+		// re-encodes chars like !, ', ~ which inflates length — comparing against
+		// the same encoding avoids false sanity-check reverts).
+		const baselineSearch = cleaner.toString();
 
 		// Case-insensitive copy for redirect lookup
 		const cleanerCI = new URLSearchParams();
@@ -395,8 +394,16 @@ export class Cleaner {
 			if (rule.rev) data.url = data.url.replace(/=(?=&|$)/gm, "");
 		}
 
-		// Calculate diff
-		const diff = getLinkDiff(data.url, url);
+		// Calculate diff (compare against re-encoded baseline so URLSearchParams
+		// encoding inflation doesn't trigger a false revert)
+		const baselineUrl =
+			parsed.protocol +
+			"//" +
+			parsed.host +
+			parsed.pathname +
+			(baselineSearch ? "?" + baselineSearch : "") +
+			parsed.hash;
+		const diff = getLinkDiff(data.url, baselineUrl);
 		data.info.isNewHost = diff.isNewHost;
 		data.info.difference = diff.difference;
 		data.info.reduction = diff.reduction;

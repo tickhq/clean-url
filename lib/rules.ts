@@ -227,7 +227,7 @@ export default [
 	{
 		name: "amazon.com",
 		match: /amazon\.[a-z0-9]{0,3}/i,
-		rules: ["psc", "colid", "coliid", "linkId", "tag", "linkCode", "ms3_c", "pf_rd_s", "pf_rd_t", " pf_rd_i", "pf_rd_m", "pd_rd_w", "qid", "sr", "keywords", "dchild", "ref", "ref_", "rnid", "pf_rd_r", "pf_rd_p", "pd_rd_r", "smid", "pd_rd_wg", "content-id", "spLa", "crid", "sprefix", "hvlocint", "hvdvcmdl", "hvptwo", "hvpone", "hvpos", "qu", "pd_rd_i", "nc2", "nc1", "trk", "sc_icampaign", "trkCampaign", "ufe", "sc_icontent", "sc_ichannel", "sc_iplace", "sc_country", "sc_outcome", "sc_geo", "sc_campaign", "sc_channel"],
+		rules: ["psc", "colid", "coliid", "linkId", "tag", "linkCode", "ms3_c", "pf_rd_s", "pf_rd_t", "pf_rd_i", "pf_rd_m", "pd_rd_w", "qid", "sr", "keywords", "dchild", "ref", "ref_", "rnid", "pf_rd_r", "pf_rd_p", "pd_rd_r", "smid", "pd_rd_wg", "content-id", "spLa", "crid", "sprefix", "hvlocint", "hvdvcmdl", "hvptwo", "hvpone", "hvpos", "qu", "pd_rd_i", "nc2", "nc1", "trk", "sc_icampaign", "trkCampaign", "ufe", "sc_icontent", "sc_ichannel", "sc_iplace", "sc_country", "sc_outcome", "sc_geo", "sc_campaign", "sc_channel"],
 		replace: [/(\/ref|&ref_)=[^\/?]*/i],
 	},
 	{
@@ -319,7 +319,7 @@ export default [
 	{
 		name: "imdb.com",
 		match: /^.*\.imdb\.com/i,
-		rules: ["ref_", "ref\\_", "pf_rd_m", "pf_rd_r", "pf_rd_p", "pf_rd_s", "pf_rd_t", "pf_rd_i", "ref_hp_hp_e_2", "rf", "ref"],
+		rules: ["ref_", "pf_rd_m", "pf_rd_r", "pf_rd_p", "pf_rd_s", "pf_rd_t", "pf_rd_i", "ref_hp_hp_e_2", "rf", "ref"],
 	},
 	{
 		name: "gog.com",
@@ -772,7 +772,7 @@ export default [
 	{
 		name: "bing.com",
 		match: /^www\.bing\.com/i,
-		rules: ["qs", "form", "sp", "pq", "sc", "sk", "cvid", "FORM", "ck", "simid", "thid", "cdnurl", "pivotparams", "ghsh", "ghacc", "ccid", "", "ru"],
+		rules: ["qs", "form", "sp", "pq", "sc", "sk", "cvid", "FORM", "ck", "simid", "thid", "cdnurl", "pivotparams", "ghsh", "ghacc", "ccid", "ru"],
 	},
 	{
 		name: "jf79.net",
@@ -1634,7 +1634,7 @@ export default [
 	{
 		name: "amc.yandex.ru",
 		match: /.*\.?amc\.yandex\.ru/i,
-		rules: ["ad_type=banner", "cmn_id", "crv_id"],
+		rules: ["ad_type", "cmn_id", "crv_id"],
 	},
 	{
 		name: "ameblo.jp",

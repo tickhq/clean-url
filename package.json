@@ -1,6 +1,6 @@
 {
 	"name": "@tickhq/clean-url",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Strip tracking and clutter from URLs.",
 	"type": "module",
 	"exports": {
@@ -15,7 +15,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "tsc",
+		"build": "tsc -p tsconfig.build.json",
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"prepublishOnly": "pnpm run build"

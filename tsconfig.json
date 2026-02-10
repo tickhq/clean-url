@@ -12,8 +12,9 @@
 		"declarationMap": true,
 		"sourceMap": true,
 		"moduleResolution": "bundler",
-		"resolveJsonModule": true
+		"resolveJsonModule": true,
+		"types": ["node"]
 	},
-	"include": ["src/**/*", "lib/**/*"],
+	"include": ["src/**/*", "lib/**/*", "test/**/*"],
 	"exclude": ["node_modules", "dist"]
 }
