@@ -9,10 +9,10 @@ import {
 	type Data,
 	type Handler,
 	type Config,
-} from "./utils";
-import { handlers as defaultHandlers } from "./handlers";
-import { CleanerConfig } from "./config";
-import defaultRules from "../lib/rules";
+} from "./utils.js";
+import { handlers as defaultHandlers } from "./handlers.js";
+import { CleanerConfig } from "./config.js";
+import defaultRules from "../lib/rules.js";
 
 const MAX_REDIRECT_DEPTH = 5;
 const RULE_DEFAULTS: Partial<Rule> = {
@@ -426,4 +426,4 @@ export class Cleaner {
 
 export const CleanURL = new Cleaner();
 export const clean = (url: string) => CleanURL.clean(url);
-export { validateURL } from "./utils";
+export { validateURL } from "./utils.js";

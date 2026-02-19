@@ -1,5 +1,5 @@
-import type { Handler } from "./utils";
-import { decodeBase64, regexExtract, validateURL } from "./utils";
+import type { Handler } from "./utils.js";
+import { decodeBase64, regexExtract, validateURL } from "./utils.js";
 
 /**
  * Custom handlers for sites that encode or obfuscate the real URL.
