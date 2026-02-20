@@ -216,7 +216,7 @@ export default [
 	},
 	{
 		name: "audible.com",
-		match: /www\.audible\.com/i,
+		match: /^(?:www\.)?audible\.com$/i,
 		rules: ["qid", "sr", "pf_rd_p", "pf_rd_r", "plink", "ref"],
 	},
 	{
@@ -242,7 +242,7 @@ export default [
 	},
 	{
 		name: "twitch.tv",
-		match: /www\.twitch\.tv/i,
+		match: /^(?:www\.)?twitch\.tv$/i,
 		rules: ["tt_medium", "tt_content", "tt_email_id"],
 	},
 	{
@@ -258,7 +258,7 @@ export default [
 	},
 	{
 		name: "pixiv.net",
-		match: /www\.pixiv\.net/i,
+		match: /^(?:www\.)?pixiv\.net$/i,
 		rules: ["from", "g", "i", "p"],
 	},
 	{
@@ -273,7 +273,7 @@ export default [
 	},
 	{
 		name: "google.com",
-		match: /www.google\..*/i,
+		match: /^(?:www.)?google\..*$/i,
 		rules: ["sourceid", "client", "aqs", "sxsrf", "uact", "ved", "iflsig", "source", "ei", "oq", "gs_lcp", "sclient", "bih", "biw", "sa", "dpr", "rlz", "gs_lp", "sca_esv", "si", "gs_l", "gs_lcrp"],
 		redirect: "url",
 		amp: {
@@ -288,22 +288,22 @@ export default [
 	},
 	{
 		name: "humblebundle.com",
-		match: /www\.humblebundle\.com/i,
+		match: /^(?:www\.)?humblebundle\.com$/i,
 		rules: ["hmb_campaign", "hmb_medium", "hmb_source", "linkID", "mcID", "partner"],
 	},
 	{
 		name: "greenmangaming.com",
-		match: /www\.greenmangaming\.com/i,
+		match: /^(?:www\.)?greenmangaming\.com$/i,
 		rules: ["CJEVENT", "pdpgatetoken"],
 	},
 	{
 		name: "fanatical.com",
-		match: /www\.fanatical\.com/i,
+		match: /^(?:www\.)?fanatical\.com$/i,
 		rules: ["cj_pid", "cj_aid", "aff_track", "CJEVENT"],
 	},
 	{
 		name: "newsweek.com",
-		match: /www\.newsweek\.com/i,
+		match: /^(?:www\.)?newsweek\.com$/i,
 		rules: ["subref", "amp"],
 	},
 	{
@@ -323,12 +323,12 @@ export default [
 	},
 	{
 		name: "gog.com",
-		match: /www\.gog\.com/i,
+		match: /^(?:www\.)?gog\.com$/i,
 		rules: ["at_gd", "pp", "prod_id", "rec_item_id", "rec_scenario_id", "rec_source", "rec_sub_source_id", "vds_id"],
 	},
 	{
 		name: "tiktok.com",
-		match: /www\.tiktok\.com/i,
+		match: /^(?:www\.)?tiktok\.com$/i,
 		rules: ["_d", "_r", "attr_medium", "attr_source", "checksum", "embed_source", "enter_from", "enter_method", "is_copy_url", "is_from_webapp", "q", "refer", "referer_url", "referer_video_id", "sec_uid", "sec_user_id", "sender_device", "sender_web_id", "share_app_id", "share_author_id", "share_item_id", "share_link_id", "social_sharing", "source", "t", "tt_from", "u_code", "user_id", "web_id"],
 	},
 	{
@@ -356,7 +356,7 @@ export default [
 	},
 	{
 		name: "findojobs.co.nz",
-		match: /www\.findojobs\.co\.nz/i,
+		match: /^(?:www\.)?findojobs\.co\.nz$/i,
 		rules: ["source"],
 	},
 	{
@@ -401,7 +401,7 @@ export default [
 	},
 	{
 		name: "gamesload.com",
-		match: /^www\.gamesload\.com/i,
+		match: /^(?:www\.)?gamesload\.com$/i,
 		rules: ["affil"],
 	},
 	{
@@ -486,12 +486,12 @@ export default [
 	},
 	{
 		name: "msn.com",
-		match: /www\.msn\.com/i,
+		match: /^(?:www\.)?msn\.com$/i,
 		rules: ["cvid", "ei", "ocid", "pc"],
 	},
 	{
 		name: "nuuvem.com",
-		match: /www\.nuuvem\.com/i,
+		match: /^(?:www\.)?nuuvem\.com$/i,
 		rules: ["ranMID", "ranEAID", "ranSiteID"],
 	},
 	{
@@ -507,7 +507,7 @@ export default [
 	},
 	{
 		name: "cnbc.com",
-		match: /www\.cnbc\.com/i,
+		match: /^(?:www\.)?cnbc\.com$/i,
 		rules: ["__source", "par"],
 	},
 	{
@@ -551,17 +551,17 @@ export default [
 	},
 	{
 		name: "countdown.co.nz",
-		match: /www\.countdown\.co\.nz/i,
+		match: /^(?:www\.)?countdown\.co\.nz$/i,
 		rules: ["promo_name", "promo_creative", "promo_position", "itemID"],
 	},
 	{
 		name: "etsy.com",
-		match: /www\.etsy\.com/i,
+		match: /^(?:www\.)?etsy\.com$/i,
 		rules: ["click_key", "click_sum", "rec_type", "ref", "frs", "sts", "dd_referrer"],
 	},
 	{
 		name: "wattpad.com",
-		match: /www\.wattpad\.com/i,
+		match: /^(?:www\.)?wattpad\.com$/i,
 		rules: ["wp_page", "wp_uname", "wp_originator"],
 	},
 	{
@@ -571,12 +571,12 @@ export default [
 	},
 	{
 		name: "noctre.com",
-		match: /www\.noctre\.com/i,
+		match: /^(?:www\.)?noctre\.com$/i,
 		rules: ["aff"],
 	},
 	{
 		name: "dreamgame.com",
-		match: /www\.dreamgame\.com/i,
+		match: /^(?:www\.)?dreamgame\.com$/i,
 		rules: ["affiliate"],
 	},
 	{
@@ -591,7 +591,7 @@ export default [
 	},
 	{
 		name: "jdoqocy.com",
-		match: /^www\.jdoqocy\.com/i,
+		match: /^(?:www\.)?jdoqocy\.com$/i,
 		redirect: "url",
 	},
 	{
@@ -601,7 +601,7 @@ export default [
 	},
 	{
 		name: "gamersgate.com",
-		match: /www\.gamersgate\.com/i,
+		match: /^(?:www\.)?gamersgate\.com$/i,
 		rules: ["aff", "caff"],
 	},
 	{
@@ -633,7 +633,7 @@ export default [
 	},
 	{
 		name: "emjcd.com",
-		match: /^www\.emjcd\.com/i,
+		match: /^(?:www\.)?emjcd\.com$/i,
 		decode: { param: "d", lookFor: "destinationUrl" },
 	},
 	{
@@ -648,7 +648,7 @@ export default [
 	},
 	{
 		name: "tvguide.com",
-		match: /^www\.tvguide\.com/i,
+		match: /^(?:www\.)?tvguide\.com$/i,
 		amp: {
 			regex: /(.*)\#link=/i,
 		},
@@ -660,7 +660,7 @@ export default [
 	},
 	{
 		name: "tkqlhce.com",
-		match: /^www\.tkqlhce\.com/i,
+		match: /^(?:www\.)?tkqlhce\.com$/i,
 		redirect: "url",
 	},
 	{
@@ -685,26 +685,26 @@ export default [
 	},
 	{
 		name: "baidu.com",
-		match: /^www\.baidu\.com/i,
+		match: /^(?:www\.)?baidu\.com$/i,
 		rules: ["rsv_spt", "rsv_idx", "rsv_pq", "rsv_t", "rsv_bp", "rsv_dl", "rsv_iqid", "rsv_enter", "rsv_sug1", "rsv_sug2", "rsv_sug3", "rsv_sug4", "rsv_sug5", "rsv_sug6", "rsv_sug7", "rsv_sug8", "rsv_sug9", "rsv_sug7", "rsv_btype", "tn", "sa", "rsf", "rqid", "usm", "__pc2ps_ab", "p_signature", "p_sign", "p_timestamp", "p_tk", "oq"],
 	},
 	{
 		name: "primevideo.com",
-		match: /^www\.primevideo\.com/i,
+		match: /^(?:www\.)?primevideo\.com$/i,
 		replace: [/\/ref=[^\/?]*/i],
 	},
 	{
 		name: "threadless.com",
-		match: /^www\.threadless\.com/i,
+		match: /^(?:www\.)?threadless\.com$/i,
 	},
 	{
 		name: "wsj.com",
-		match: /^www\.wsj\.com/i,
+		match: /^(?:www\.)?wsj\.com$/i,
 		rules: ["mod", "reflink"],
 	},
 	{
 		name: "thewarehouse.co.nz",
-		match: /^www\.thewarehouse\.co\.nz/i,
+		match: /^(?:www\.)?thewarehouse\.co\.nz$/i,
 		rules: ["sfmc_j", "sfmc_id", "sfmc_mid", "sfmc_uid", "sfmc_id", "sfmc_activityid"],
 	},
 	{
@@ -716,7 +716,7 @@ export default [
 	},
 	{
 		name: "express.co.uk",
-		match: /^www\.express\.co\.uk/i,
+		match: /^(?:www\.)?express\.co\.uk$/i,
 		replace: [/\/amp$/i],
 	},
 	{
@@ -726,7 +726,7 @@ export default [
 	},
 	{
 		name: "indiegala.com",
-		match: /^www\.indiegala\.com/i,
+		match: /^(?:www\.)?indiegala\.com$/i,
 		rules: ["ref"],
 	},
 	{
@@ -741,22 +741,22 @@ export default [
 	},
 	{
 		name: "manymorestores.com",
-		match: /^www\.manymorestores\.com/i,
+		match: /^(?:www\.)?manymorestores\.com$/i,
 		rules: ["ref"],
 	},
 	{
 		name: "macgamestore.com",
-		match: /^www\.macgamestore\.com/i,
+		match: /^(?:www\.)?macgamestore\.com$/i,
 		rules: ["ars"],
 	},
 	{
 		name: "blizzardgearstore.com",
-		match: /^www\.blizzardgearstore\.com/i,
+		match: /^(?:www\.)?blizzardgearstore\.com$/i,
 		rules: ["_s"],
 	},
 	{
 		name: "playbook.com",
-		match: /^www\.playbook\.com/i,
+		match: /^(?:www\.)?playbook\.com$/i,
 		rules: ["p"],
 	},
 	{
@@ -766,12 +766,12 @@ export default [
 	},
 	{
 		name: "pinterest.com",
-		match: /^www\.pinterest\..*/i,
+		match: /^(?:www\.)?pinterest\..*$/i,
 		rules: ["rs"],
 	},
 	{
 		name: "bing.com",
-		match: /^www\.bing\.com/i,
+		match: /^(?:www\.)?bing\.com$/i,
 		rules: ["qs", "form", "sp", "pq", "sc", "sk", "cvid", "FORM", "ck", "simid", "thid", "cdnurl", "pivotparams", "ghsh", "ghacc", "ccid", "ru"],
 	},
 	{
@@ -781,7 +781,7 @@ export default [
 	},
 	{
 		name: "frankenergie.nl",
-		match: /^www\.frankenergie\.nl/i,
+		match: /^(?:www\.)?frankenergie\.nl$/i,
 		rules: ["aff_id"],
 	},
 	{
@@ -813,17 +813,17 @@ export default [
 	},
 	{
 		name: "psychologytoday.com",
-		match: /www\.psychologytoday\.com/i,
+		match: /^(?:www\.)?psychologytoday\.com$/i,
 		rules: ["amp"],
 	},
 	{
 		name: "mouser.com",
-		match: /www\.mouser\.com/i,
+		match: /^(?:www\.)?mouser\.com$/i,
 		rules: ["qs"],
 	},
 	{
 		name: "awin1.com",
-		match: /www\.awin1\.com/i,
+		match: /^(?:www\.)?awin1\.com$/i,
 		rules: ["awinaffid", "awinmid", "clickref", "linkid"],
 		redirect: "ued",
 	},
@@ -834,7 +834,7 @@ export default [
 	},
 	{
 		name: "castorama.fr",
-		match: /www\.castorama\.fr/i,
+		match: /^(?:www\.)?castorama\.fr$/i,
 		rules: ["syte_ref"],
 	},
 	{
@@ -844,7 +844,7 @@ export default [
 	},
 	{
 		name: "pbtech.co.nz",
-		match: /www\.pbtech\.co\.nz/i,
+		match: /^(?:www\.)?pbtech\.co\.nz$/i,
 		rules: ["qr"],
 	},
 	{
@@ -859,17 +859,17 @@ export default [
 	},
 	{
 		name: "newsflare.com",
-		match: /www\.newsflare\.com/i,
+		match: /^(?:www\.)?newsflare\.com$/i,
 		rules: ["jwsource"],
 	},
 	{
 		name: "wish.com",
-		match: /www\.wish\.com/i,
+		match: /^(?:www\.)?wish\.com$/i,
 		rules: ["share"],
 	},
 	{
 		name: "change.org",
-		match: /www\.change\.org/i,
+		match: /^(?:www\.)?change\.org$/i,
 		rules: ["source_location", "user_flow"],
 	},
 	{
@@ -879,7 +879,7 @@ export default [
 	},
 	{
 		name: "lowes.com",
-		match: /www\.lowes\.com/i,
+		match: /^(?:www\.)?lowes\.com$/i,
 		rules: ["cm_mmc", "ds_rl"],
 	},
 	{
@@ -904,7 +904,7 @@ export default [
 	},
 	{
 		name: "kqzyfj.com",
-		match: /www\.kqzyfj\.com/i,
+		match: /^(?:www\.)?kqzyfj\.com$/i,
 		rules: ["cjsku", "pubdata"],
 		redirect: "url",
 	},
@@ -930,7 +930,7 @@ export default [
 	},
 	{
 		name: "studentbeans.com",
-		match: /www\.studentbeans\.com/i,
+		match: /^(?:www\.)?studentbeans\.com$/i,
 		rules: ["source"],
 	},
 	{
@@ -940,7 +940,7 @@ export default [
 	},
 	{
 		name: "solodeportes.com.ar",
-		match: /www\.solodeportes\.com\.ar/i,
+		match: /^(?:www\.)?solodeportes\.com\.ar$/i,
 		rules: ["nosto", "refSrc"],
 	},
 	{
@@ -1012,7 +1012,7 @@ export default [
 	},
 	{
 		name: "cbsnews.com",
-		match: /www\.cbsnews\.com/i,
+		match: /^(?:www\.)?cbsnews\.com$/i,
 		rules: ["ftag", "intcid"],
 		amp: {
 			replace: { text: "cbsnews.com/amp/", with: "cbsnews.com/" },
@@ -1030,17 +1030,17 @@ export default [
 	},
 	{
 		name: "wfaa.com",
-		match: /www\.wfaa\.com/i,
+		match: /^(?:www\.)?wfaa\.com$/i,
 		rules: ["ref"],
 	},
 	{
 		name: "buyatoyota.com",
-		match: /www\.buyatoyota\.com/i,
+		match: /^(?:www\.)?buyatoyota\.com$/i,
 		rules: ["siteid"],
 	},
 	{
 		name: "independent.co.uk",
-		match: /www\.independent\.co\.uk/i,
+		match: /^(?:www\.)?independent\.co\.uk$/i,
 		rules: ["amp", "regSourceMethod"],
 	},
 	{
@@ -1060,7 +1060,7 @@ export default [
 	},
 	{
 		name: "optigruen.com",
-		match: /www\.optigruen\.[a-z0-9]{0,3}/i,
+		match: /^(?:www\.)?optigruen\.[a-z0-9]{0,3}$/i,
 		rules: ["cHash", "chash", "mdrv"],
 	},
 	{
@@ -1110,7 +1110,7 @@ export default [
 	},
 	{
 		name: "curseforge.com",
-		match: /www\.curseforge\.com/i,
+		match: /^(?:www\.)?curseforge\.com$/i,
 		redirect: "remoteurl",
 	},
 	{
@@ -1121,7 +1121,7 @@ export default [
 	},
 	{
 		name: "chess.com",
-		match: /www\.chess\.com/i,
+		match: /^(?:www\.)?chess\.com$/i,
 		rules: ["c"],
 	},
 	{
@@ -1166,7 +1166,7 @@ export default [
 	},
 	{
 		name: "stardockentertainment.info",
-		match: /www\.stardockentertainment\.info/i,
+		match: /^(?:www\.)?stardockentertainment\.info$/i,
 		decode: { targetPath: true, handler: "stardockentertainment.info" },
 	},
 	{
@@ -1202,7 +1202,7 @@ export default [
 	},
 	{
 		name: "hypable.com",
-		match: /www\.hypable\.com/i,
+		match: /^(?:www\.)?hypable\.com$/i,
 		amp: {
 			replace: { text: /amp\/$/gi },
 		},
@@ -1217,14 +1217,14 @@ export default [
 	},
 	{
 		name: "indiatoday.in",
-		match: /www\.indiatoday\.in/i,
+		match: /^(?:www\.)?indiatoday\.in$/i,
 		amp: {
 			replace: { text: "www.indiatoday.in/amp/", with: "www.indiatoday.in/" },
 		},
 	},
 	{
 		name: "seek.co.nz",
-		match: /www\.seek\.co\.nz/i,
+		match: /^(?:www\.)?seek\.co\.nz$/i,
 		rules: ["tracking", "sc_trk"],
 	},
 	{
@@ -1234,12 +1234,12 @@ export default [
 	},
 	{
 		name: "seekbusiness.com.au",
-		match: /www\.seekbusiness\.com\.au/i,
+		match: /^(?:www\.)?seekbusiness\.com\.au$/i,
 		rules: ["tracking", "cid"],
 	},
 	{
 		name: "garageclothing.com",
-		match: /www\.garageclothing\.com/i,
+		match: /^(?:www\.)?garageclothing\.com$/i,
 		rules: ["syte_ref", "site_ref"],
 	},
 	{
@@ -1254,12 +1254,12 @@ export default [
 	},
 	{
 		name: "nbcconnecticut.com",
-		match: /www\.nbcconnecticut\.com/i,
+		match: /^(?:www\.)?nbcconnecticut\.com$/i,
 		rules: ["amp"],
 	},
 	{
 		name: "pbs.org",
-		match: /www\.pbs\.org/i,
+		match: /^(?:www\.)?pbs\.org$/i,
 		amp: {
 			replace: { text: "pbs.org/newshour/amp/", with: "pbs.org/newshour/" },
 		},
@@ -1274,12 +1274,12 @@ export default [
 	},
 	{
 		name: "ladysmithchronicle.com",
-		match: /www\.ladysmithchronicle\.com/i,
+		match: /^(?:www\.)?ladysmithchronicle\.com$/i,
 		rules: ["ref"],
 	},
 	{
 		name: "businesstoday.in",
-		match: /www\.businesstoday\.in/i,
+		match: /^(?:www\.)?businesstoday\.in$/i,
 		amp: {
 			replace: { text: "www.businesstoday.in/amp/markets/", with: "www.businesstoday.in/markets/" },
 		},
@@ -1293,7 +1293,7 @@ export default [
 	},
 	{
 		name: "gadgets360.com",
-		match: /www\.gadgets360\.com/i,
+		match: /^(?:www\.)?gadgets360\.com$/i,
 		amp: {
 			sliceTrailing: "/amp",
 		},
@@ -1305,33 +1305,33 @@ export default [
 	},
 	{
 		name: "elprogreso.es",
-		match: /www\.elprogreso\.es/i,
+		match: /^(?:www\.)?elprogreso\.es$/i,
 		amp: {
 			replace: { text: ".amp.html", with: ".html" },
 		},
 	},
 	{
 		name: "thenewsminute.com",
-		match: /www\.thenewsminute\.com/i,
+		match: /^(?:www\.)?thenewsminute\.com$/i,
 		amp: {
 			replace: { text: "www.thenewsminute.com/amp/story/", with: "www.thenewsminute.com/" },
 		},
 	},
 	{
 		name: "mirror.co.uk",
-		match: /www\.mirror\.co\.uk/i,
+		match: /^(?:www\.)?mirror\.co\.uk$/i,
 		amp: {
 			sliceTrailing: ".amp",
 		},
 	},
 	{
 		name: "libretro.com",
-		match: /www\.libretro\.com/i,
+		match: /^(?:www\.)?libretro\.com$/i,
 		rules: ["amp"],
 	},
 	{
 		name: "the-sun.com",
-		match: /www\.the-sun\.com/i,
+		match: /^(?:www\.)?the-sun\.com$/i,
 		amp: {
 			sliceTrailing: "amp/",
 		},
@@ -1351,17 +1351,17 @@ export default [
 	},
 	{
 		name: "news.com.au",
-		match: /www\.news\.com\.au/i,
+		match: /^(?:www\.)?news\.com\.au$/i,
 		rules: ["sourceCode"],
 	},
 	{
 		name: "wvva.com",
-		match: /www\.wvva\.com/i,
+		match: /^(?:www\.)?wvva\.com$/i,
 		rules: ["outputType"],
 	},
 	{
 		name: "realestate.com.au",
-		match: /www\.realestate\.com\.au/i,
+		match: /^(?:www\.)?realestate\.com\.au$/i,
 		rules: ["campaignType", "campaignChannel", "campaignName", "campaignContent", "campaignSource", "campaignPlacement", "sourcePage", "sourceElement", "cid"],
 	},
 	{
@@ -1384,13 +1384,13 @@ export default [
 	},
 	{
 		name: "rosequake.com",
-		match: /www\.rosequake\.com/i,
+		match: /^(?:www\.)?rosequake\.com$/i,
 		rules: ["edmID", "linkID", "userID", "em", "taskItemID"],
 		redirect: "to",
 	},
 	{
 		name: "rekrute.com",
-		match: /www\.rekrute\.com/i,
+		match: /^(?:www\.)?rekrute\.com$/i,
 		rules: ["clear"],
 		redirect: "keyword",
 	},
@@ -4847,65 +4847,65 @@ export default [
 	},
 	{
 		name: "www.alternate.de",
-		match: /.*\.?www\.alternate\.de/i,
+		match: /^.*\.?(?:www\.)?alternate\.de$/i,
 		rules: ["campaign", "partner"],
 	},
 	{
 		name: "www.baidu.com",
-		match: /.*\.?www\.baidu\.com/i,
+		match: /^.*\.?(?:www\.)?baidu\.com$/i,
 		rules: ["eqid", "rsv_pq", "rsv_t"],
 	},
 	{
 		name: "www.ebay.",
-		match: /.*\.?www\.ebay\./i,
+		match: /^.*\.?(?:www\.)?ebay\.$/i,
 		rules: ["_trkparms", "amdata", "campid", "epid", "hash", "itmmeta", "itmprp", "mkcid", "mkevt", "mkrid", "ssspo", "sssrc", "ssuid"],
 	},
 	{
 		name: "www.electronic4you.de",
-		match: /.*\.?www\.electronic4you\.de/i,
+		match: /^.*\.?(?:www\.)?electronic4you\.de$/i,
 	},
 	{
 		name: "www.galaxus.de",
-		match: /.*\.?www\.galaxus\.de/i,
+		match: /^.*\.?(?:www\.)?galaxus\.de$/i,
 		rules: ["pcscpId"],
 	},
 	{
 		name: "www.hcaptcha.com",
-		match: /.*\.?www\.hcaptcha\.com/i,
+		match: /^.*\.?(?:www\.)?hcaptcha\.com$/i,
 		rules: ["ref"],
 	},
 	{
 		name: "www.hitseller.de",
-		match: /.*\.?www\.hitseller\.de/i,
+		match: /^.*\.?(?:www\.)?hitseller\.de$/i,
 		rules: ["etcc_cmp", "etcc_med", "etcc_produkt"],
 	},
 	{
 		name: "www.lidl.de",
-		match: /.*\.?www\.lidl\.de/i,
+		match: /^.*\.?(?:www\.)?lidl\.de$/i,
 		rules: ["msktc"],
 	},
 	{
 		name: "www.nicovideo.jp",
-		match: /.*\.?www\.nicovideo\.jp/i,
+		match: /^.*\.?(?:www\.)?nicovideo\.jp$/i,
 		rules: ["at"],
 	},
 	{
 		name: "www.pricezilla.de",
-		match: /.*\.?www\.pricezilla\.de/i,
+		match: /^.*\.?(?:www\.)?pricezilla\.de$/i,
 		rules: ["bid"],
 	},
 	{
 		name: "www.rakuten.co.jp",
-		match: /.*\.?www\.rakuten\.co\.jp/i,
+		match: /^.*\.?(?:www\.)?rakuten\.co\.jp$/i,
 		rules: ["s-id"],
 	},
 	{
 		name: "www.technikdirekt.de",
-		match: /.*\.?www\.technikdirekt\.de/i,
+		match: /^.*\.?(?:www\.)?technikdirekt\.de$/i,
 	},
 	{
 		name: "www.yandex.",
-		match: /.*\.?www\.yandex\./i,
+		match: /^.*\.?(?:www\.)?yandex\.$/i,
 	},
 	{
 		name: "x.com",

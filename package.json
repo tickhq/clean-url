@@ -1,6 +1,6 @@
 {
 	"name": "@tickhq/clean-url",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Strip tracking and clutter from URLs.",
 	"type": "module",
 	"exports": {
